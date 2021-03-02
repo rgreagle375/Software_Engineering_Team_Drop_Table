@@ -7,6 +7,25 @@ var connection_string = "**********";
 // will use db once we have mLab setup
 const db = require("monk")(connection_string);
 
+
+// password is "admin"
+const mongoose = require('mongoose')
+const {MONGOURI} = require('./keys')
+
+mongoose.connect(MONGOURI, {
+  useNewUrlParser:true,
+  useUnifiedTopology: true
+})
+
+mongoose.connection.on('connected',()=>{
+  console.log("Successfully connected to MongoDB!")
+})
+
+mongoose.connection.on('error',(err)=>{
+  console.log("Error connecting to MongoDB",err)
+})
+
+
 // this tutorial said to create a routes folder - https://www.valentinog.com/blog/socket-react/
 const index = require("./routes/index");
 // our localhost port - I think we need an env file to deploy
