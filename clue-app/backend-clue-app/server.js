@@ -25,15 +25,12 @@ mongoose.connection.on('error',(err)=>{
   console.log("Error connecting to MongoDB",err)
 })
 
-
-// this tutorial said to create a routes folder - https://www.valentinog.com/blog/socket-react/
-const index = require("./routes/index");
 // our localhost port - I think we need an env file to deploy
 const port = process.env.PORT || 3001;
 const app = express();
 
-// I think we need to update this when we deploy (from same website as above)
-app.use(index);
+// serve static build files to clients
+app.use(express.static("build"));
 // our server instance
 const server = http.createServer(app);
 // This creates our socket using the instance of the server
