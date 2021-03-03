@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import openSocket from "socket.io-client";
 
 // running locally
 //import openSocket, from "socket.io-client";
