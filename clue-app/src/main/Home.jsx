@@ -1,6 +1,12 @@
 import React, { Component } from "react";
-import openSocket from "socket.io-client";
-const socket = openSocket('http://localhost:3001', {transports: ['websocket']});
+
+// running locally
+//import openSocket, from "socket.io-client";
+//const socket = openSocket('http://localhost:3001', {transports: ['websocket']});
+
+// deploy 
+import { io } from "socket.io-client";
+const socket = io();
 
 class Home extends Component {
     constructor(props) {
