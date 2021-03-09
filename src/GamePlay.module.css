@@ -1,0 +1,22 @@
+.wrap {
+	display: flex;
+	justify-content: space-between;
+	height: 90vh;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.mainInformations {
+	max-width: 400px;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	background: teal;
+}

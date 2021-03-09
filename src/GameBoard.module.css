@@ -1,0 +1,49 @@
+.board {
+	margin-top: 75px;
+	display: inline-grid;
+	grid-template-rows: repeat(23, 30px);
+	grid-template-columns: repeat(22, 30px);
+}
+
+.square {
+	background-color: teal;
+	border: 1px solid black;
+	grid-row-end: span 1;
+	grid-column-end: span 1;
+}
+
+.centerText {
+	cursor: default;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.room {
+	background-color: grey;
+	border: 1px solid teal;
+}
+
+.door {
+	background-color: cyan;
+	border: 1px solid black;
+	font-size: calc(30px / 2);
+	font-weight: bold;
+	grid-row-end: span 1;
+	grid-column-end: span 1;
+}
+
+.suspect {
+	grid-row-end: span 1;
+	grid-column-end: span 1;
+	font-size: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.void {
+	background-color: cyan;
+	opacity: 0.5;
+	border: 1px solid black;
+}

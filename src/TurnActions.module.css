@@ -1,0 +1,36 @@
+.actions li {
+	margin: 10px 0;
+}
+
+.turnContainer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 15px auto;
+	height: 150px;
+}
+
+.yourTurnDiv {
+	width: 100%;
+	text-align: center;
+}
+
+.buttonsStyle {
+	width: 100%;
+	border: none;
+	padding: 5px;
+	outline: none;
+	border-radius: 7px;
+	box-shadow: 0px 1px 3px black;
+}
+
+.accForm,
+.accForm input {
+	width: 300px;
+}
+
+.accForm {
+	height: 100%;
+}
